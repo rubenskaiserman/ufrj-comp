@@ -52,8 +52,47 @@ def erro_pg(q:float, n)->float:
     erro = soma_pg - aproximacao
     return erro
 
+def calculo_gorjeta(conta:float)->float:
+    '''
+        A gorjeta do garçom é 15% do valor da conta.
+        15% de x é x*0.15
+        Logo o valor da gorjeta é 0.15 * conta
+        Função recebe valor da conta
+        Função retorna valor da gorjeta
+    '''
+    return conta*0.15
 
-if __name__ == '__main__':
-    
+def calculo_gorjeta_o_retorno(conta:float, porcentagem:float)->float:
+    '''
+        Função recebe valor da conta
+        Função recebe porcentagem de gorjeta que deve ser dada. 
+        Porcentagem deve ser passada como 10 para 10% e não 0.1
+        Função retorna valor da gorjeta
+    '''
+    return conta*porcentagem/100
 
-    print(res)
+def calculo_juros(saldo_inicial:float, qtd_meses:int, juros_mensais:float)->float:
+    '''
+        Função recebe trẽs parâmetros: Saldo inicial, quantidade de meses passados e juros por mês
+        Saldo Final = Saldo Inicial(1 + Quantidade de Meses * Juros por mês)
+        Retorna saldo final
+        Lembrando que porcentagem deve ser passada no formato 10 como 10% e não 0.1
+    '''
+    return saldo_inicial * (1 + qtd_meses*juros_mensais/100)
+
+def arrasto_barco(vel_correntesa:float, vel_barco:float, larg_rio:float)->float:
+    '''
+        Assume-se que não há interferência externa no movimento do barco em direção ao outro lado do rio.
+        Considera-se que a velocidade tanto do barco quanto da correntesa é uniforme.
+        Assume-se que as dimensões do barco são despreziveis com relação ao rio.
+        Assume-se que não há resistência do barco com relação a correntesa, ou seja, ele se move junto com a correntesa lateralmente.
+        Ou seja, o barco irá cruzar o rio em um tempo previsível.
+        O barco será arrastado pela correntesa durante a exata mesma quantidade de tempo a qual ele leva para cruzar o rio.
+        Assume-se que a largura do rio é entregue em metros.
+        Assume-se que tanto a velocidade do barco quanto da correntesa é passada em m/s
+        Portanto a quantidade de tempo para cruzar o rio é igual a largura do rio dividida pela velocidade do barco.
+        Sabe-se a distância pela qual o barco foi arrastado é igual a velocidade da correntesa multiplicada pelo tempo de cruzamento.
+    '''
+    tempo_cruzamento = larg_rio / vel_barco
+    distancia_arrasto = tempo_cruzamento * vel_correntesa
+    return distancia_arrasto

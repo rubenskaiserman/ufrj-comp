@@ -89,7 +89,7 @@ def arrasto_barco(vel_correntesa:float, vel_barco:float, larg_rio:float)->float:
         Ou seja, o barco irá cruzar o rio em um tempo previsível.
         O barco será arrastado pela correntesa durante a exata mesma quantidade de tempo a qual ele leva para cruzar o rio.
         Assume-se que a largura do rio é entregue em metros.
-        Assume-se que tanto a velocidade do barco quanto da correntesa é passada em m/s
+        Assume-se que tanto a velocidade do barco quanto da correntesa são passadas em m/s
         Portanto a quantidade de tempo para cruzar o rio é igual a largura do rio dividida pela velocidade do barco.
         Sabe-se a distância pela qual o barco foi arrastado é igual a velocidade da correntesa multiplicada pelo tempo de cruzamento.
     '''

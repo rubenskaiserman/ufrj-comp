@@ -62,13 +62,11 @@ def questao_4a(x1, y1, x2, y2):
         A distância entre dois pontos dentro de um plano pode ser dada através do teorema de pitágoras.
         A diferença entre coordenadas em x, e a diferença entre as coordenadas em y são catetos.
         A distância é a hipotenusa.
-        Agora existe um pequeno problema. Distâncias comprimentos de retas são valores absolutos.
-        Ou seja, a diferença entre as coordenadas deve sempre gerar valores positivos a fim de que o resultado seja correto.
-        Existem alguns meios de solucionar esse problema, como a função abs() do python
-        Contudo, nesse exemplo utilizaremos as funções max() e min() que já foram discutidas na disciplina.
+        Geralmente sería necessário manipular os valores de modo que as distâncias fossem sempre positivas. Contudo, dado que
+        ambos os valores serão elevados à um expoente par, conclui-se que os valores considerados serão, já, alterados deste modo.
     '''
-    a = max(x1, x1) - min(x1, x2)
-    b = max(y1, y2) - min(y1, y2)
+    a = x1 - x2
+    b = y1 - y2
     return math.sqrt(a**2 + b**2)
 
 def questao_4b(a, b):

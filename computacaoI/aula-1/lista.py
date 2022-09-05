@@ -29,14 +29,14 @@ def funcao_segundo_grau(a:float, b:float, c:float, x:float)->float:
         Funções do segundo grau seguem o seguinte formato f(x)=ax^2 + bx + c
         A função recebe os quatro parâmetros de uma função do segundo grau
         A função retorna o resultado da conta'''
-    return a * x ** 2 + b * x + c
+    return (a*x**2) + b*x + c
 
 def media_ponderada(valor1:float, valor2:float, peso1:float, peso2:float)->float:
     ''' A função media_ponderada() recebe quatro parâmetros valor1, valor2, peso1 e peso2.
         Ela retorna (valor1 * peso1 + valor2 * peso2)/(peso1 + peso2)'''
     return (valor1 * peso1 + valor2 * peso2)/(peso1 + peso2)
 
-def erro_pg(q:float, n)->float:
+def erro_pg(q:float, n:int)->float:
     ''' 
         A soma de uma progressão geométrica infinita é representada por 1/(1-q).
         A soma dos n primeiros termos de uma progressão geométrica é representada por a_1*(q^n - 1)/(q - 1).

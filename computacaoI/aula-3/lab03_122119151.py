@@ -21,16 +21,18 @@ def quantas_raizes(a, b, c):
         return 0
 
 # questao3
-def string_repetida(n, string):
+def string_repetida(n:int, string):
     # Retorna uma string repetida n vezes
-    return string * n
+    return string * int(n)
 # Nota: Tendo em vista que o senhor não citou estruturas de repetição, nem recursividade, mas citou multiplicação de strings,
 # suponho que o que o senhor deseja seja a string repetida da maneira apresentada acima.
 
 # Questão 4
 def formata_data(dia, mes, ano):
     # recebe 3 ints dia, mes e ano, respectivamente. Retorna uma string com a formatação de data coerente com os valores recebidos
-    return f'{dia}/{mes}/{ano}'
+    return str(dia) + '/' + str(mes) + '/' + str(ano) # Faria com fstring mas suponho que não seja a resposta desejada
+
+print(formata_data(1, 2, 2003))
 
 # Questão 5
 def funcao_inflexada(x):

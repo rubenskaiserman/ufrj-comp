@@ -32,16 +32,14 @@ def formata_data(dia, mes, ano):
     # recebe 3 ints dia, mes e ano, respectivamente. Retorna uma string com a formatação de data coerente com os valores recebidos
     return str(dia) + '/' + str(mes) + '/' + str(ano) # Faria com fstring mas suponho que não seja a resposta desejada
 
-print(formata_data(1, 2, 2003))
-
 # Questão 5
 def funcao_inflexada(x):
     # Recebe o valor x da f(x)
     # Retorna o valor de f(x)
     # x = 0 --> f(x) = 0
     # 0 <= x < 2 --> f(x) = x
-    # 2 <= x <= 3 --> f(x) = 2
-    # 3 < x < 5 --> f(x) = 3
+    # 2 <= x <= 3.5 --> f(x) = 2
+    # 3.5 < x < 5 --> f(x) = 3
     # x >= 5 --> f(x) = x^2 - 10x + 28   
     if x < 0: 
         return 0
@@ -57,10 +55,10 @@ def funcao_inflexada(x):
 # Casos de teste necessários: 
 # x < 0
 # 0 <= x < 2
-# 2 <= x <=3
-# 3 < x < 5
+# 2 <= x <=3.5
+# 3.5 < x < 5
 # x >= 5
-# Lembrando que a mudança de regras são irrelevantes em pontos de inflexão com exceção do ponto 3
+# Lembrando que a mudança de regras são irrelevantes em pontos de inflexão com exceção do ponto 3.5
 # Ou seja: As duas regras que poderiam estar afetando cada pontos geram o mesmo resultado nos pontos 0, 2 e 5.
 
 # São necessários 5 testes

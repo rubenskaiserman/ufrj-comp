@@ -83,15 +83,15 @@ def formato_data(data:str)->tuple:
         Assume-se que a string entregue conterá exatos 8 caracteres onde 2 são barras e o restante são números sem sinal
         str -> tuple
     '''
-    validos = []
+    validos = ()
     componente = (int(data[:2]), int(data[3:5]), int(data[6:]))
     if 0 < componente[0] <= 31 and 0 < componente[1] <= 12:
-        validos.append('dd/mm/yy')
+        validos += ('dd/mm/yy',)
     if 0 < componente[0] <= 12 and 0 < componente[1] <= 31:
-        validos.append('mm/dd/yy')
+        validos += ('mm/dd/yy',)
     if 0 < componente[1] <= 12 and 0 < componente[2] <= 31:
-        validos.append('yy/mm/dd')
-    return tuple(validos)
+        validos += ('yy/mm/dd',)
+    return validos
 
 # Teste
 # print(formato_data('98/25/07'))

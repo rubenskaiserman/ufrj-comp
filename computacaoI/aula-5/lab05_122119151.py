@@ -13,8 +13,6 @@ contatinhosApp
 '''
 
 # a)
-from distutils.log import info
-
 
 def criar_contato(nome:str, telefone:str, email:str, instagram:str)->list:
     '''
@@ -24,12 +22,12 @@ def criar_contato(nome:str, telefone:str, email:str, instagram:str)->list:
     return [nome, [telefone], email, instagram]
 
 # b)
-def modificar_contato(info:list, update_id:int, new_info:str)->list:
+def modificar_contato(info:list, update_id:int, new_info:str)->bool:
     '''
         Assume-se que será passado um update_id do tipo int
         Assume-se que será passado um valor coerente com o tipo de informação que se espera
         Atualiza dada lista de informações sobre um contato
-        list, int, str->list
+        list, int, str-> bool
     '''
     if update_id == 1 and new_info not in info[1]:
         info[1].append(new_info)

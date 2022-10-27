@@ -17,7 +17,7 @@ def del_phone(contato:list, phone:str)->bool:
 def get_championship_data(championship_table:dict)->dict:
     # É passada uma tabela no formato dict contendo as informações de todos os times do campeonato
     # Esse dict possui uma key que corresponde ao time, e um value que corresponde à pontuação dele.
-    # O código retorna o campeão e a média de pontuações em um formato de dict.
+    # O código retorna o campeão, a média de pontuações em um formato de dict e uma lista contendo os times do campeonato.
     champion = {'club': '', 'points': 0}
     for club, points in championship_table.items():
         if points > champion['points']:
@@ -28,7 +28,8 @@ def get_championship_data(championship_table:dict)->dict:
 
     data = {
         'campeao': champion,
-        'pontuacao_media': pontuacao_media
+        'pontuacao_media': pontuacao_media,
+        'times': list(championship_table.keys())
     }   
     return data
 

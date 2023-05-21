@@ -1,22 +1,20 @@
 #include <stdio.h>
 
-int main(void) {
-    double imc, h;
-    char sexo;
-    
-    printf("Informe seu sexo [M/F]: ");
-    scanf("%c", &sexo);
-    printf("Insira sua altura: ");
-    scanf("%lf", &h);
+double imc(double m, double h);
 
-    if (sexo == 'M') {
-        imc = 72.7 * h - 58;
-    } else if(sexo == 'F') {
-        imc = 62.1 * h - 44.7;
-    } else {
-        printf("Sexo inválido!");
-    }
-    printf("Seu peso ideal é %lf\n", imc);
+int main(void) {
+    double m, h;
+    printf("Altura: ");
+    scanf("%lf", &h);
+    printf("Peso: ");
+    scanf("%lf", &m);
+
+    double imcResult = imc(m, h);
+    printf("IMC: %.2lf\n", imcResult);
 
     return 0;
+}
+
+double imc(double m, double h) {
+    return m / (h * h);
 }

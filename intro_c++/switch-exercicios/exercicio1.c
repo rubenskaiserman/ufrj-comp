@@ -59,4 +59,5 @@ int main(void) {
 
     // A abordagem alternativa é interessante devido à uma simplificação e redução na quantidade de código necessária.
 
+    return 0;
 }

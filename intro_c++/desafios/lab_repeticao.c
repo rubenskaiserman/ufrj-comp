@@ -16,10 +16,12 @@ int main(void) {
     printf("Insira o número: ");
     scanf("%i", &number);
     int product = 0;
-    for(int i = 2; i < number; i++){
+    int i = 2;
+    while(i < number){
         if(isPrimeNumber(i)) {
             product += i;
         }
+        i++;
     }
     printf("Product: %i\n", product);
 }

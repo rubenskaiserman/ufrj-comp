@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <math.h>
 
 bool isPrimeNumber(int number) {
-    for(int i = 2; i < number/i + 1; i++) {
+    for(int i = 2; i <= sqrt(number); i++) {
         if(number % i == 0) {
             return false;
         }

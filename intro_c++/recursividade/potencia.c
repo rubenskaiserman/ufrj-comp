@@ -5,9 +5,6 @@ int power(int n, int potencia) {
     if(potencia == 0) {
         return 1;
     } 
-    else if (potencia == 1) {
-        return n;
-    }
     return n * power(n, potencia - 1);
 }
 

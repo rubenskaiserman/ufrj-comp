@@ -5,7 +5,10 @@ int power(int n, int potencia) {
     if(potencia == 0) {
         return 1;
     } 
-    return n * power(n, potencia - 1);
+    else if (expoente > 0) {
+        return base * potencia(base, expoente - 1);
+    }
+    return 1 / (base * potencia(base, -expoente - 1));
 }
 
 int main(int argc, char *argv[]) {

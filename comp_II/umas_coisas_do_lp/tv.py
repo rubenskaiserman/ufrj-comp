@@ -17,8 +17,6 @@
 # Mostrar todos os dados simultaneamente (canal, volume e marca). Se o volume estiver entre 81 e 99, indicar que o volume está alto.
 # Crie a classe Televisao para representar essas características e funcionalidades.
 
-from typing import Any
-
 
 class Televisao():
     def __init__(self, polegada: int, marca: str, preco: float, estado:bool=False, canal:int=1, volume:int=1 ):

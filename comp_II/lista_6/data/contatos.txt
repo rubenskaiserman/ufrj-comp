@@ -1,0 +1,3 @@
+Maria,2198762345,maria@abc.org
+João,1123459876,joao@issoae.etc
+Carlos,8100997788,carlos@ufrj.edu

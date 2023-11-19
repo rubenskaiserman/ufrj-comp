@@ -30,17 +30,17 @@ class Animal(ABC):
         pass
     
     def __str__(self):
-        return f"Nome: {self.nome}, Idade: {self.idade}"
+        return f"Nome: {self.nome}, Idade: {self.idade}, Som: {self.fazer_som()}"
     
 class Cachorro(Animal):
     
     def fazer_som(self):
-        print("AUAUAU")
+        return "AUAUAU"
 
 class Gato(Animal):
     
     def fazer_som(self):
-        print("MIAU")
+        return "MIAU"
         
 
 class Operador:
